@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coze Chat Example</title>
+    <style>
+        /* 添加一些基本样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #f9f9f9;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>欢迎使用Coze聊天客户端</h1>
+        <p>这是一个简单的网页示例，用来展示如何集成Coze聊天功能。</p>
+    </div>
+    <footer>
+        <p>&copy; 2024 Coze. All rights reserved.</p>
+    </footer>
+
+    <!-- 在body区域放置Coze SDK -->
+    <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/0.1.0-beta.7/libs/cn/index.js"></script>
+    <script>
+        new CozeWebSDK.WebChatClient({
+            config: {
+                bot_id: '7429349366168961033',
+            },
+            componentProps: {
+                title: 'Coze',
+            },
+        });
+    </script>
+</body>
+</html>
